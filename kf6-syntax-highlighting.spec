@@ -26,6 +26,9 @@ BuildRequires: doxygen
 BuildRequires: cmake(Qt6ToolsTools)
 BuildRequires: cmake(Qt6)
 BuildRequires: cmake(Qt6QuickTest)
+BuildRequires: cmake(Qt6PrintSupport)
+BuildRequires: cmake(Qt6Quick)
+BuildRequires: pkgconfig(xerces-c)
 Requires: %{libname} = %{EVRD}
 
 %description
