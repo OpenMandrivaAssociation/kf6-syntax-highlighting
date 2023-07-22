@@ -1,6 +1,6 @@
 %define libname %mklibname KF6SyntaxHighlighting
 %define devname %mklibname KF6SyntaxHighlighting -d
-%define git 20230715
+%define git 20230722
 
 Name: kf6-syntax-highlighting
 Version: 5.240.0
