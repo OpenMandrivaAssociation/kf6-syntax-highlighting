@@ -1,6 +1,6 @@
 %define libname %mklibname KF6SyntaxHighlighting
 %define devname %mklibname KF6SyntaxHighlighting -d
-%define git 20230811
+%define git 20230812
 
 Name: kf6-syntax-highlighting
 Version: 5.240.0
@@ -30,6 +30,7 @@ BuildRequires: cmake(Qt6PrintSupport)
 BuildRequires: cmake(Qt6Quick)
 BuildRequires: pkgconfig(xerces-c)
 Requires: %{libname} = %{EVRD}
+Requires: kate-syntax-highlighter = %{EVRD}
 
 %description
 Syntax highlighting Engine for Structured Text and Code
@@ -51,6 +52,15 @@ Requires: %{libname} = %{EVRD}
 Development files (Headers etc.) for %{name}.
 
 Syntax highlighting Engine for Structured Text and Code
+
+# This is split into a separate package for the sake of KF5.
+# It can be merged back into the main package once we drop KF5.
+%package -n kate-syntax-highlighter
+Summary: Syntax highlighter for the Kate text editor
+Group: System/Libraries
+
+%description -n kate-syntax-highlighter
+Syntax highlighter for the Kate text editor
 
 %prep
 %autosetup -p1 -n syntax-highlighting-%{?git:master}%{!?git:%{version}}
@@ -74,7 +84,6 @@ for i in %{buildroot}%{_datadir}/locale/*/*/*.qm; do
 done
 
 %files -f %{name}.lang
-%{_bindir}/kate-syntax-highlighter
 %{_datadir}/qlogging-categories6/ksyntaxhighlighting.*
 
 %files -n %{devname}
@@ -86,3 +95,6 @@ done
 %files -n %{libname}
 %{_libdir}/libKF6SyntaxHighlighting.so*
 %{_qtdir}/qml/org/kde/syntaxhighlighting
+
+%files -n kate-syntax-highlighter
+%{_bindir}/kate-syntax-highlighter
