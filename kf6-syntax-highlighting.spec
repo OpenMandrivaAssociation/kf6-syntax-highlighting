@@ -1,6 +1,6 @@
 %define libname %mklibname KF6SyntaxHighlighting
 %define devname %mklibname KF6SyntaxHighlighting -d
-%define git 20230927
+%define git 20231005
 
 Name: kf6-syntax-highlighting
 Version: 5.240.0
@@ -82,7 +82,6 @@ done
 %{_includedir}/KF6/KSyntaxHighlighting
 %{_libdir}/cmake/KF6SyntaxHighlighting
 %{_qtdir}/doc/KF6SyntaxHighlighting.*
-%{_qtdir}/mkspecs/modules/qt_KSyntaxHighlighting.pri
 
 %files -n %{libname}
 %{_libdir}/libKF6SyntaxHighlighting.so*
