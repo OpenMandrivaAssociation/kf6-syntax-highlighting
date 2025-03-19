@@ -7,7 +7,7 @@
 
 Name: kf6-syntax-highlighting
 Version: 6.12.0
-Release: %{?git:0.%{git}.}1
+Release: %{?git:0.%{git}.}2
 %if 0%{?git:1}
 Source0: https://invent.kde.org/frameworks/syntax-highlighting/-/archive/master/syntax-highlighting-master.tar.bz2#/syntax-highlighting-%{git}.tar.bz2
 %else
