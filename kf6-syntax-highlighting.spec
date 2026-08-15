@@ -6,7 +6,7 @@
 #define git 20240217
 
 Name: kf6-syntax-highlighting
-Version: 6.28.1
+Version: 6.29.0
 Release: %{?git:0.%{git}.}1
 %if 0%{?git:1}
 Source0: https://invent.kde.org/frameworks/syntax-highlighting/-/archive/master/syntax-highlighting-master.tar.bz2#/syntax-highlighting-%{git}.tar.bz2
@@ -62,7 +62,7 @@ Development files (Headers etc.) for %{name}.
 Syntax highlighting Engine for Structured Text and Code
 
 %prep
-%autosetup -p1 -n syntax-highlighting-6.28.1
+%autosetup -p1 -n syntax-highlighting-%{version}
 %cmake \
 	-DBUILD_QCH:BOOL=ON \
 	-DBUILD_WITH_QT6:BOOL=ON \
